@@ -1,0 +1,60 @@
+.tour-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.tour-image-container {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.tour-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.included-list {
+  list-style: none;
+  padding: 0;
+}
+
+.included-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.check-icon {
+  color: #ffc107;
+  margin-right: 10px;
+}
+
+.premium-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.premium-section h3 {
+  font-size: 1.5rem;
+}
+
+.premium-section p {
+  font-size: 1.1rem;
+}

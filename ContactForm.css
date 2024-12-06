@@ -1,0 +1,189 @@
+/* Main Container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Box */
+.form-box {
+  width: 100%;
+  max-width: 600px; /* Maximum width for larger screens */
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-in-out;
+}
+
+/* Form Title */
+.form-title {
+  font-size: 1.8rem;
+  color: #ffc107;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form Layout */
+.custom-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Add space between form elements */
+  margin-bottom: 1rem;
+}
+
+/* Responsive Column */
+.col {
+  flex: 1;
+  min-width: 220px; /* Minimum width for smaller screens */
+}
+
+/* Input Styles */
+.input-group {
+  position: relative;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 2px solid #ffc107;
+}
+
+textarea {
+  resize: none;
+}
+
+.custom-select {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: #333333;
+  background-color: transparent;
+  border: none;
+}
+
+/* Button Styles */
+.submit-btn {
+  padding: 0.6rem;
+  background-color: #ffc107;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 100%; /* Full width for better touch experience on small devices */
+}
+
+.submit-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 20px;
+  padding: 15px 15px;
+  background-color: #e6f7e9;
+  color: #2d7a4d;
+  border: 1px solid #b2dfb6;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out, fadeOut 5s 4.5s ease-in-out forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Help Box Styling (if included) */
+.help-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: slideInRight 1s ease-in-out;
+}
+
+.help-title {
+  font-size: 1.6rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+.help-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+
+  .submit-btn {
+    font-size: 0.9rem; /* Slightly smaller button text */
+  }
+
+  .form-box, .help-box {
+    max-width: 100%; /* Full width for form and help box on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    padding: 1rem; /* Reduce padding on extra small screens */
+  }
+
+  .form-title {
+    font-size: 1.5rem; /* Slightly smaller title for small screens */
+  }
+
+  input, textarea, select {
+    font-size: 0.8rem; /* Adjust font size for form fields on small screens */
+  }
+
+  .submit-btn {
+    font-size: 0.85rem; /* Further reduction in button text size */
+  }
+}

@@ -1,0 +1,68 @@
+/* Section with parallax scrolling background image */
+.apart-section {
+    position: relative;
+    background-image: url("C:/Users/Nawaz/Desktop/tours/taj/public/images/x37.jpg"); /* Provide your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax scrolling effect */
+    padding: 80px 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .apart-overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay for better text visibility */
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  
+  .apart-container {
+    max-width: 1200px;
+    text-align: center; /* Center the text horizontally */
+    display: flex;
+    flex-direction: column; /* Stack subtitle, title, and description vertically */
+    align-items: center; /* Center align all content */
+  }
+  
+  .apart-subtitle {
+    font-size: 24px;
+    color: #f9ca24; /* Yellow color for subtitle */
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .apart-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .apart-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 15px;
+    position: relative;
+  }
+  
+  .wing-icon {
+    color: #f9ca24; /* Yellow color for the wing icon */
+    font-size: 40px;
+  }
+  
+  .apart-description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; /* Center the description */
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  

@@ -1,0 +1,78 @@
+/* Styling for the Gallery Section */
+.gallery-section {
+  padding: 2rem 1rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+
+/* Gallery Container */
+.gallery-container {
+  background-color: #f9f9f7;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Gallery Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  grid-gap: 1.5rem; /* Gap between images */
+  justify-items: center;
+  padding: 0;
+}
+
+/* Gallery Item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px; /* Larger image size */
+  height: 300px; /* Adjust the height */
+  border-radius: 10px;
+  border: 2px solid #ccc; /* Thin border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fits perfectly */
+  transition: transform 0.5s ease;
+  border-radius: 10px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px); /* Slight hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Add shuffle effect for images */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Adjust to 1 column on mobile screens */
+  }
+}

@@ -1,0 +1,172 @@
+.main-title {
+  font-size: 2.5rem;
+  color:#ffc107;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px black; /* Adds a subtle shadow effect */
+}
+
+
+.price-info-container {
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #ffc107;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .price-info-title {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+  
+  .price-info-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-group-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 calc(50% - 1rem);
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    color: black;
+    min-width: 150px;
+  }
+  
+  .required-asterisk {
+    color: red;
+  }
+  
+  .form-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .adjust-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .small-input {
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem; /* Adjusted padding for button space */
+    font-size: 1rem;
+    background-color: white; /* Ensure background is visible */
+    box-sizing: border-box; /* Ensure padding doesn't overflow */
+  }
+  
+  .adjust-button-left,
+  .adjust-button-right {
+    position: absolute;
+    top: 35%; /* Adjust this value to move the buttons upwards */
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ffc107;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .adjust-button-left {
+    left: 5px;
+  }
+  
+  .adjust-button-right {
+    right: 5px;
+  }
+  
+  .calculation-details {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: black;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-top: 1rem;
+  }
+  
+  
+
+  .total-price {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+
+.calculation-details p {
+    color: black; /* Ensure text color is always black */
+  }
+
+  .price-calculation .price-details {
+    color: black;
+    font-size: 1.2rem;
+  }
+  
+  .book-now-container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .book-now-button {
+    background-color: #ffc107;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-now-button:hover {
+    background-color: orange;
+  }
+  
+  @media (max-width: 768px) {
+    .price-info-form {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .form-group-horizontal {
+      flex-direction: column;
+    }
+  
+    .adjust-button-left,
+    .adjust-button-right {
+      width: 20px;
+      height: 20px;
+      font-size: 0.8rem;
+    }
+  }
+  

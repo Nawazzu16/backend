@@ -1,0 +1,148 @@
+.train-pricing-container {
+    padding: 2rem;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 2px solid #ffc107;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .train-pricing-title {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 1.5rem;
+  }
+  
+  .train-pricing-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-group-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1 1 calc(50% - 1rem);
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    color: #333;
+    min-width: 150px;
+  }
+  
+  .required-asterisk {
+    color: red;
+  }
+  
+  .form-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .adjust-input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .small-input {
+    text-align: center;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0.5rem 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .adjust-button-left,
+  .adjust-button-right {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ffc107;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .adjust-button-left {
+    left: 5px;
+  }
+  
+  .adjust-button-right {
+    right: 5px;
+  }
+  
+  .calculation-details {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+  
+  .total-price {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: rgb(10, 199, 10);
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .book-now-container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  .book-now-button {
+    background-color: #ffc107;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .book-now-button:hover {
+    background-color: orange;
+  }
+  
+  @media (max-width: 768px) {
+    .train-pricing-form {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .form-group-horizontal {
+      flex-direction: column;
+    }
+  
+    .adjust-button-left,
+    .adjust-button-right {
+      width: 25px;
+      height: 25px;
+      font-size: 1rem;
+    }
+  
+    .calculation-details {
+      font-size: 0.9rem;
+    }
+  }
+  

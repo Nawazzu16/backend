@@ -1,0 +1,255 @@
+/* Container Styling */
+.tour-package-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.tour-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.image-container:hover .tour-image {
+  filter: brightness(100%);
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.title-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 214, 10, 0.8), rgba(0, 0, 0, 0.8));
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease;
+}
+
+.tour-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #ffd60a;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Keyframe Animation for Overlay */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Facilities Section */
+.facilities-section {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Section for Timeline and Facilities */
+.timeline-and-facilities {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .timeline-and-facilities {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* Timeline Section */
+.timeline-section {
+  flex: 1;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #ddd;
+}
+
+.timeline-icon {
+  background-color: #ffd60a;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 15px;
+}
+
+.timeline-text {
+  padding-left: 40px;
+}
+
+.timeline-title {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Vertical Divider */
+.vertical-divider {
+  border-left: 2px solid #ddd;
+  height: 100%;
+  margin: 0 30px;
+}
+
+/* Facilities Section (Right side with 4 boxes) */
+.facilities-section-right {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.facilities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.facility-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 48%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.facility-icon {
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+.facility-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.facility-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .facilities-row {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-and-facilities {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .timeline-section {
+    margin-right: 0;
+  }
+
+  .facility-card {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .tour-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .tour-title {
+    font-size: 2rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+
+  .facility-title {
+    font-size: 1.2rem;
+  }
+
+  .facility-description {
+    font-size: 0.9rem;
+  }
+}

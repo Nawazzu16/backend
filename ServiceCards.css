@@ -1,0 +1,98 @@
+.service-cards-section {
+  position: relative;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("C:/Users/Nawaz/Desktop/tours/taj/public/images/x35.jpg"); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: 0;
+  animation: scaleBackground 15s ease-in-out infinite;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333; /* Darker color for better visibility */
+  margin-bottom: 2rem;
+  text-transform: uppercase; /* Uppercase title for consistency */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Fixed width for cards */
+  text-align: center; /* Center text inside card */
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333; /* Title color */
+}
+
+.card-description {
+  padding: 0 1rem;
+  color: #555; /* Slightly lighter color for description */
+}
+
+.card-button {
+  display: block;
+  background-color: #ffc107; /* Button color */
+  color: #000;
+  text-align: center;
+  padding: 0.8rem 0;
+  margin: 1rem auto;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #e0a800; /* Darker shade on hover */
+  transform: scale(1.05);
+}
+
+@keyframes scaleBackground {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

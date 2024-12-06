@@ -1,0 +1,200 @@
+/* General styles for Contact Section */
+.contact-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif; /* Consistent font family across your website */
+}
+
+/* Left side: Contact info */
+.contact-info {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem; /* Increased font size for better readability */
+  color: #000000; /* Black color for headings */
+  font-weight: 600; /* Bold for headings */
+}
+
+.contact-info p {
+  font-size: 1.4rem; /* Larger font size for paragraph */
+  margin-bottom: 1rem;
+  color: #000000; /* Black color for text */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 2rem; /* Increased icon size for better visibility */
+  color: #ffc107;
+}
+
+/* Right side: Contact form */
+.contact-form {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap for better spacing */
+  margin-top: 2rem;
+}
+
+/* Title for the contact form */
+.contact-form h2 {
+  font-size: 2rem; /* Increased font size for the title */
+  color: #000000;
+  text-align: center;
+  font-weight: 600; /* Bold font style for the title */
+}
+
+/* Form elements */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1.2rem; /* Increased padding for better touch interaction */
+  font-size: 1.2rem; /* Larger font size for better readability */
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded corners for inputs */
+}
+
+.form-input {
+  max-width: 550px; /* Increased max-width for larger screens */
+}
+
+.form-textarea {
+  max-width: 550px;
+  height: 160px; /* Increased height for better user experience */
+}
+
+/* Submit button */
+.submit-button {
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px; /* Rounded corners for the button */
+  cursor: pointer;
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e0a800;
+}
+
+/* Success message */
+.success-message {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem; /* Increased font size for success message */
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile Devices */
+@media screen and (max-width: 767px) {
+  .contact-section-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-info {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 1.8rem; /* Adjusted for smaller screens */
+  }
+
+  .info-item p {
+    font-size: 1.2rem; /* Larger text for mobile */
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 1.2rem;
+    font-size: 1.2rem; /* Increased font size for better touch interaction */
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+  .contact-section-container {
+    padding: 2rem;
+  }
+
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 2.2rem; /* Adjusted font size */
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Larger screens (Laptops and desktops) */
+@media screen and (min-width: 1025px) {
+  .contact-section-container {
+    flex-wrap: nowrap;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    max-width: 40%;
+  }
+
+  .contact-form {
+    max-width: 50%;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 80%;
+  }
+
+  .submit-button {
+    padding: 1rem 2rem;
+  }
+}

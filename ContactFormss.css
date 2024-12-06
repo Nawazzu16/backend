@@ -1,0 +1,15 @@
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-control {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}

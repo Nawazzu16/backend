@@ -1,0 +1,163 @@
+/* Adjusted CSS for Tour Cards */
+
+/* Flexbox wrapper for the tour cards */
+.tour-cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  align-items: stretch; /* Ensure all cards align vertically */
+}
+
+/* Individual Tour Card */
+.tour-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards on the top row */
+  display: flex;
+  flex-direction: column;
+  max-width: calc(33.33% - 20px); /* Same as flex property */
+  min-width: 280px; /* Minimum card width */
+}
+
+/* Image Wrapper */
+.tour-card-img-wrapper {
+  flex-shrink: 0; /* Prevent shrinking */
+  height: 300px; /* Fixed height for images */
+  overflow: hidden;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.tour-card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure proper image alignment */
+  transition: transform 0.4s ease;
+}
+
+.tour-card-img-wrapper:hover .tour-card-img-top {
+  transform: scale(1.1);
+}
+
+/* Label on Image */
+.tour-card-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Card Body */
+.tour-card-body {
+  flex-grow: 1; /* Allow content to grow and fill space */
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title, Text, Price */
+.tour-card-title {
+  font-size: 1.6rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.tour-card-text {
+  font-size: 1rem;
+  color: #242323;
+  margin-bottom: 0.5rem; /* Reduced gap between description and price */
+}
+
+/* Price Section */
+.tour-card-price-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem; /* Reduced gap between description and price */
+}
+
+.tour-card-price-text {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.3rem;
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+  animation-delay: 1s;
+}
+
+/* Down Arrow */
+.tour-card-price-arrow {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #333;
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+  animation-delay: 1.2s;
+}
+
+.tour-card-price-arrow::before {
+  content: "↓";
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+/* Tour Card Button */
+.tour-card-btn {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.tour-card-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .tour-cards-wrapper {
+    gap: 15px;
+  }
+  .tour-card {
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 992px) {
+  .tour-cards-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Center the cards with less gap */
+    gap: 10px; /* Reduced gap between cards */
+  }
+  .tour-card {
+    flex: 1 1 calc(45% - 10px); /* Slightly closer cards */
+    max-width: calc(45% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .tour-cards-wrapper {
+    gap: 15px; /* Maintain some spacing */
+  }
+  .tour-card {
+    flex: 1 1 100%; /* Full width for mobile view */
+    max-width: 100%;
+  }
+}

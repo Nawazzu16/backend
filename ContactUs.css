@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif; /* Modern and clean font style */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Light background for the page */
+}
+
+/* Hero Section */
+.unique-hero-section {
+  height: 80vh; /* Adjusted for better layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Black background for contrast */
+  color: #ffffff; /* White text for contrast */
+  text-align: center;
+  padding: 3rem 1rem;
+  flex-direction: column; /* Ensures a centered layout */
+}
+
+.unique-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.unique-hero-title {
+  font-size: 3rem; /* Larger title size */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8), 1px 1px 4px rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.unique-hero-icon {
+  color: #ffd700;
+  margin-left: 1rem; /* Space between icon and title */
+  font-size: 2.5rem;
+}
+
+.unique-hero-description {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin: 0 auto;
+  text-align: justify;
+  padding: 0 2rem;
+}
+
+/* Contact Section Wrapper */
+.unique-contact-section-wrapper {
+  padding: 3rem 1rem;
+  background-color: #ffffff; /* Clean white background */
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column; /* Column layout for smaller screens */
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Form Section */
+.form-section {
+  width: 100%;
+  max-width: 700px; /* Increased max-width for larger screens */
+  padding: 2.5rem;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-section form input,
+.form-section form textarea {
+  width: 100%;
+  padding: 1.5rem; /* Increased padding for larger input area */
+  font-size: 1.4rem; /* Larger font size for readability */
+  margin-bottom: 1.5rem; /* Spacing between fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-section form button {
+  width: 100%;
+  padding: 1.2rem; /* Slightly increased padding */
+  background-color: #03045e;
+  color: white;
+  font-size: 1.4rem; /* Larger font size for button */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-section form button:hover {
+  background-color: #022c74;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* WhatsApp Link */
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.whatsapp-link a {
+  background-color: #25d366;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-link a:hover {
+  background-color: #22c359;
+  transform: scale(1.05);
+}
+
+/* Map Wrapper */
+.map-wrapper {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .unique-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .unique-hero-description {
+    font-size: 1.3rem;
+  }
+
+  .form-section {
+    width: 90%; /* Adjust form width */
+    padding: 2rem;
+  }
+
+  .form-section form input,
+  .form-section form textarea {
+    font-size: 1.3rem;
+  }
+
+  .form-section form button {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .unique-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .unique-hero-description {
+    font-size: 1.1rem;
+  }
+
+  .form-section {
+    width: 100%; /* Full width for smaller screens */
+    padding: 1.8rem;
+  }
+
+  .form-section form input,
+  .form-section form textarea {
+    font-size: 1.2rem;
+  }
+
+  .form-section form button {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-link a {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .unique-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .unique-hero-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form-section form input,
+  .form-section form textarea {
+    font-size: 1.2rem;
+  }
+
+  .form-section form button {
+    font-size: 1.2rem;
+  }
+}

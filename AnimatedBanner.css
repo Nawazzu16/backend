@@ -1,0 +1,39 @@
+/* Banner Container Styling */
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 100px;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Moving Text Styling */
+.moving-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
+    animation: moveText 500s linear infinite;
+}
+
+.moving-text span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 50px;
+    color: #c2b280;
+    text-transform: uppercase;
+}
+
+/* Continuous animation for moving text */
+@keyframes moveText {
+    0% {
+        transform: translateX(0); /* Start from the right of the container */
+    }
+    100% {
+        transform: translateX(-100%); /* Move completely to the left */
+    }
+}
