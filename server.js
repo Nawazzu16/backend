@@ -1,15 +1,18 @@
 const express = require('express');
-
 const cors = require('cors');
+const nodemailer = require('nodemailer');
+
+const app = express();
 
 // Update CORS to allow your frontend domain
 app.use(cors({
-  origin: 'https://tajmahaljourneys.com/', // Replace with your eUKhost domain
+  origin: 'https://tajmahaljourneys.com', // Replace with your eUKhost frontend domain
   methods: ['GET', 'POST'],
   credentials: true
 }));
 
-const nodemailer = require('nodemailer');
+app.use(express.json());
+
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -43,11 +46,9 @@ app.post('/api/contact', (req, res) => {
 });
 
 // Booking Form Endpoint
-// Booking Form Endpoint
 app.post('/api/booking', (req, res) => {
   const { name, email, package, message, contactNumber, country } = req.body;
 
-  // Map the short package name to the full name
   const packageNames = {
     sunrise: "Taj Mahal Sunrise Tour",
     car: "Taj Mahal Tour by Car",
@@ -58,7 +59,6 @@ app.post('/api/booking', (req, res) => {
 
   const fullPackageName = packageNames[package] || package;
 
-  // Create the email body with better formatting
   const emailBody = `
     <h2>New Booking Form Submission</h2>
     <table style="width: 100%; border-collapse: collapse;">
@@ -106,6 +106,7 @@ app.post('/api/booking', (req, res) => {
   });
 });
 
+// Start the server
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
