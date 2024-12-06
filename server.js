@@ -1,11 +1,15 @@
 const express = require('express');
+
 const cors = require('cors');
+
+// Update CORS to allow your frontend domain
+app.use(cors({
+  origin: 'https://tajmahaljourneys.com/', // Replace with your eUKhost domain
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
+
 const nodemailer = require('nodemailer');
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
